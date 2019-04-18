@@ -15,7 +15,7 @@ const Branding = styled.div`
 
 const LogoImg = styled.img`
   height: 1.7em;
-  margin-top: 15;
+  margin-top: 15px;
 `;
 
 class Brand extends Component {
