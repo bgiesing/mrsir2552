@@ -20,7 +20,7 @@ class Brand extends Component {
         {this.props.data.custom_name ? (
           <h1>{this.props.data.custom_name}</h1>
         ) : (
-          <img src='https://i.imgur.com/eiLI546.png' alt='MrSir2552' />
+          <img src='https://i.imgur.com/eiLI546.png' alt='MrSir2552' height=1.7em />
         )}
         {this.props.stream.stream ? <Status {...this.props} /> : <span />}
       </Branding>
