@@ -25,14 +25,6 @@ class Footer extends Component {
               : this.props.data.twitch_channel}
           </p>
         </div>
-        <div className="attrib">
-          <p>
-            <a href="//twitch.tv/bobdanoob" style={{ textDecoration: 'none', color: 'white' }}>
-              <FontAwesomeIcon icon={faAngleLeft} size="lg" /> Code by Bob /{' '}
-              <FontAwesomeIcon icon={faAngleRight} size="lg" />
-            </a>
-          </p>
-        </div>
       </Foot>
     );
   }
