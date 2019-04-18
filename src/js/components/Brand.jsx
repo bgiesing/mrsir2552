@@ -13,6 +13,11 @@ const Branding = styled.div`
   ${media.xl`font-size: 1.5em`};
 `;
 
+const Branding = styled.img`
+  height: 1.7em;
+  margin-top: 15px;
+`;
+
 class Brand extends Component {
   render() {
     return (
@@ -20,7 +25,7 @@ class Brand extends Component {
         {this.props.data.custom_name ? (
           <h1>{this.props.data.custom_name}</h1>
         ) : (
-          <img src='https://i.imgur.com/eiLI546.png' alt='MrSir2552' style="height:1.7em; margin-top:15px;" />
+          <img src='https://i.imgur.com/eiLI546.png' alt='MrSir2552' />
         )}
         {this.props.stream.stream ? <Status {...this.props} /> : <span />}
       </Branding>
