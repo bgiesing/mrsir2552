@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Icon from '@mdi/react'
-import { mdiEmail } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiEmail } from '@mdi/js';
 import {
   faEnvelope,
   faShoppingCart,
