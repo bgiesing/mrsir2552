@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { faEye, faUsers } from '@fortawesome/fontawesome-free-solid';
+import { faEye, faUserFriends } from '@fortawesome/fontawesome-free-solid';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const StatsDiv = styled.ul`
@@ -10,10 +10,11 @@ const StatsDiv = styled.ul`
   margin: 0;
 `;
 const StatItem = styled.li`
-  margin: 0 10px;
+  margin: 0 5px;
   padding: 5px 8px;
   border-radius: 3px;
   background: ${props => props.data.accent_color};
+  font-size: 1.5em;
 `;
 
 class Stats extends Component {
@@ -25,7 +26,7 @@ class Stats extends Component {
           {this.props.channel.views && this.props.channel.views.toLocaleString()}
         </StatItem>
         <StatItem {...this.props}>
-          <FontAwesomeIcon icon={faUsers} style={{ marginRight: '5px' }} />
+          <FontAwesomeIcon icon={faUserFriends} style={{ marginRight: '5px' }} />
           {this.props.channel.followers && this.props.channel.followers.toLocaleString()}
         </StatItem>
       </StatsDiv>
