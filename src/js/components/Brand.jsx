@@ -14,8 +14,9 @@ const Branding = styled.div`
 `;
 
 const LogoImg = styled.img`
-  height: 1.7em;
-  margin-top: 15px;
+  height: 1.5em;
+  margin-top: 0.9em;
+  margin-left: 1em;
 `;
 
 class Brand extends Component {
