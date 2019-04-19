@@ -73,13 +73,13 @@
     "babel-preset-env": "^1.7.0",
     "dotenv-webpack": "^1.5.4",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "jquery_tubular_plugin": "^1.0.1",
     "prop-types": "^15.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^3.0.0",
-    "styled-components": "^2.2.4"
+    "styled-components": "^2.4.0"
   },
   "eslintConfig": {
     "globals": {
