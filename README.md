@@ -1,27 +1,12 @@
-![](https://i.imgur.com/3HE9msU.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ade5e253-44cb-4196-9ac7-13fc7991d43d/deploy-status)](https://app.netlify.com/sites/mrsir2552/deploys)
 
-# Twitch Streamer Website Template
+# MrSir2552's Website
 
-This is really simple one page website. Super simple setup and easy to customize.
-
-## Demo
-
-[Check out the demo](https://streamer-site.netlify.com/)
-
-## Getting Started
-
-1. Download.
-2. Fill out the config.json.
-3. Upload.
-
-Its really that simple!
-
-## Customize
-
-There is a config.json that has some examples and has some comments on how you should fill it out. If you still need some help, open up an issue on GitHub
+Based on [rmorris84's Streamer Template](https://github.com/rmorris84/streamer-template), modified heavily by me.
 
 ## Made With...
 
+* [Netlify](//netlify.com) building and hosting the website direct from [GitHub](//github.com)
 * [React](//reactjs.org) 16
 * [jQuery](//jquery.com) Javascript Library
 * [FontAwesome 5](//fontawesome.com/) Icons
