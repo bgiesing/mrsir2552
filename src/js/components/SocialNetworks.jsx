@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Icon from '@mdi/react'
+import { mdiAccount } from '@mdi/js'
 import {
   faEnvelope,
   faShoppingCart,
@@ -53,7 +55,7 @@ class SocialNetworks extends Component {
       <SocialItems>
         {this.props.data.email && (
           <Social {...this.props} href={`mailto:${this.props.data.email}`}>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <Icon path={mdiMail} />
           </Social>
         )}
         {this.props.data.merch_link && (
@@ -118,7 +120,7 @@ class SocialNetworks extends Component {
           </Social>
         )}
         {this.props.data.reddit && (
-          <Social {...this.props} href={`//www.reddit.com/r/${this.props.data.reddit}`}>
+          <Social {...this.props} href={`//www.reddit.com/u/${this.props.data.reddit}`}>
             <FontAwesomeIcon icon={faRedditAlien} />
           </Social>
         )}
