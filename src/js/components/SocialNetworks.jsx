@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Icon from '@mdi/react';
-import { mdiEmail } from '@mdi/js';
 import {
-  faEnvelope,
-  faShoppingCart,
+  faAt,
+  faStore,
   faDollarSign,
   faLink,
 } from '@fortawesome/fontawesome-free-solid';
@@ -15,7 +13,6 @@ import {
   faDiscord,
   faInstagram,
   faSnapchatGhost,
-  faSteam,
   faSteamSymbol,
   faRedditAlien,
   faGithub,
@@ -40,7 +37,7 @@ const SocialItems = styled.div`
 `;
 
 const Social = styled.a`
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: ${props => props.data.font_color};
   transition: all 0.5s ease;
   &:hover {
@@ -55,12 +52,12 @@ class SocialNetworks extends Component {
       <SocialItems>
         {this.props.data.email && (
           <Social {...this.props} href={`mailto:${this.props.data.email}`}>
-            <Icon path={mdiEmail} size={1.2em} />
+            <FontAwesomeIcon icon={faAt} />
           </Social>
         )}
         {this.props.data.merch_link && (
           <Social {...this.props} href={this.props.data.merch_link}>
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faStore} />
           </Social>
         )}
         {this.props.data.twitter && (
@@ -100,7 +97,7 @@ class SocialNetworks extends Component {
         )}
         {this.props.data.steam && (
           <Social {...this.props} href={`//www.steamcommunity.com/id/${this.props.data.steam}`}>
-            <FontAwesomeIcon icon={faSteam} />
+            <FontAwesomeIcon icon={faSteamSymbol} />
           </Social>
         )}
         {this.props.data.steamgroup && (
