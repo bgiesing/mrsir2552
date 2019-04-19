@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Icon from '@mdi/react'
-import { mdiMail } from '@mdi/js'
+import { mdiEmail } from '@mdi/js'
 import {
   faEnvelope,
   faShoppingCart,
@@ -55,7 +55,7 @@ class SocialNetworks extends Component {
       <SocialItems>
         {this.props.data.email && (
           <Social {...this.props} href={`mailto:${this.props.data.email}`}>
-            <Icon path={mdiMail} />
+            <Icon path={mdiEmail} />
           </Social>
         )}
         {this.props.data.merch_link && (
