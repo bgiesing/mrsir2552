@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Component } from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import axios from 'axios';
 import $ from 'jquery';
 import tubular from 'jquery_tubular_plugin';
@@ -49,7 +49,7 @@ class App extends Component {
   }
   render() {
     const data = config.get();
-    injectGlobal`
+    const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     @import url("${data.font_url}");
     body {color: ${data.font_color};}
@@ -96,6 +96,7 @@ class App extends Component {
         <Header data={data} stream={this.state.streamInfo} />
         <Hero data={data} channel={this.state.channelInfo} stream={this.state.streamInfo} />
         <Footer data={data} />
+        <GlobalStyle />
       </Content>
     );
   }
