@@ -37,7 +37,7 @@ const SocialItems = styled.div`
 `;
 
 const Social = styled.a`
-  font-size: 1.6em;
+  font-size: 2em;
   color: ${props => props.data.font_color};
   transition: all 0.5s ease;
   &:hover {
