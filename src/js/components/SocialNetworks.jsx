@@ -55,7 +55,7 @@ class SocialNetworks extends Component {
       <SocialItems>
         {this.props.data.email && (
           <Social {...this.props} href={`mailto:${this.props.data.email}`}>
-            <Icon path={mdiEmail} />
+            <Icon path={mdiEmail} size={1.2em} />
           </Social>
         )}
         {this.props.data.merch_link && (
