@@ -97,6 +97,17 @@ module.exports = {
     modules: [path.resolve('./src/js'), path.resolve('./src'), 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
     // Dotenv setup
     new Dotenv(),
@@ -108,10 +119,6 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     // Enabled HMR
     new webpack.HotModuleReplacementPlugin(),
-    // Common Modules in separate chunk
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor'],
-    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
