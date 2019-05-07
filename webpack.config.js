@@ -117,7 +117,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: './src/config.json', to: './' },
       { from: './src/assets/icons/favicon.ico', to: './' },
-      { from: './src/assets/mrsir-logo-white.png', to: './' }
+      { from: './src/assets/mrsir-logo-white.png', to: './' },
+      { from: './src/assets/mrsir-icon.png', to: './' }
     ]),
     // Shows relative path when HMR is enabled
     new webpack.NamedModulesPlugin(),

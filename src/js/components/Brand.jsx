@@ -26,7 +26,7 @@ class Brand extends Component {
         {this.props.data.custom_name ? (
           <h1>{this.props.data.custom_name}</h1>
         ) : (
-          <LogoImg src='./mrsir-logo-white.png' alt='MrSir2552'></LogoImg>
+          <LogoImg src='./mrsir-icon.png' alt='MrSir2552' aria-label='MrSir2552' loading='lazy'></LogoImg>
         )}
         {this.props.stream.stream ? <Status {...this.props} /> : <span />}
       </Branding>
