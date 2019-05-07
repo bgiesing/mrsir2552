@@ -114,7 +114,11 @@ module.exports = {
     // Config for HTML Template
     HtmlWebpackPluginConfig,
     // Copy config file
-    new CopyWebpackPlugin([{ from: './src/config.json', to: './' }]),
+    new CopyWebpackPlugin([
+      { from: './src/config.json', to: './' },
+      { from: './src/assets/icons/favicon.ico', to: './' },
+      { from: './src/assets/mrsir-logo-white.png', to: './' }
+    ]),
     // Shows relative path when HMR is enabled
     new webpack.NamedModulesPlugin(),
     // Enabled HMR
