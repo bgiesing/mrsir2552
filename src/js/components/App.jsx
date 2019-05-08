@@ -53,7 +53,7 @@ class App extends Component {
     @import url("${data.font_url}");
     body {color: ${data.font_color};}
     * {box-sizing: border-box;}
-    html,body {margin: 0;padding: 0;background: #000;font-family: ${data.brand_font}, sans-serif; font-display: swap; font-weight: 500;overflow-x: hidden;}
+    html,body {margin: 0;padding: 0;background: #000;font-family: 'Roboto Slab', sans-serif; font-display: swap; font-weight: 500;overflow-x: hidden;}
     h1,h2 {display: inline-block;font-family: ${data.brand_font};font-weight: ${
   data.font_weight
 }; padding: 0; margin: 0;}
