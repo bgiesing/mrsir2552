@@ -18,6 +18,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 const vendorLibs = ['react', 'react-dom', 'jquery'];
 // Copy Webpack Plugin
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// Unused CSS
+const glob = require('glob')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 
 // Webpack Configs
 module.exports = {
@@ -91,6 +98,14 @@ module.exports = {
           },
         ],
       },
+      {
+       // CSS optimize
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      },
     ],
   },
   resolve: {
@@ -104,7 +119,13 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all'
-        }
+        },
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        },
       }
     }
   },
@@ -128,6 +149,13 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
+    }),
+    // CSS
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
     }),
   ],
 };
